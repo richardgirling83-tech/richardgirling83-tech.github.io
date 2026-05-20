@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Richard Girling, Ph.D. | GTM Strategy & Data Analytics</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+            --code-bg: #020617;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        /* Hero Section */
+        header {
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .lead-text {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            border-left: 3px solid var(--accent);
+            padding-left: 20px;
+            margin-bottom: 32px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--bg-color);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--card-bg);
+            border-color: var(--text-muted);
+        }
+
+        /* Divider */
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border);
+            margin: 40px 0;
+        }
+
+        section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Grid Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 28px;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Case Studies */
+        .case-study {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .case-study h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .cs-meta {
+            margin-bottom: 16px;
+        }
+
+        .cs-label {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .cs-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            padding-left: 12px;
+        }
+
+        /* Code Block Mockup */
+        .code-window {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.85rem;
+            color: #34d399;
+            margin: 12px 0 20px 12px;
+            overflow-x: auto;
+        }
+        .code-keyword { color: #f43f5e; }
+        .code-string { color: #38bdf8; }
+
+        /* Continuous Evolution Layout */
+        .evolution-box {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .evo-item {
+            margin-bottom: 20px;
+        }
+
+        .evo-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .evo-badge {
+            display: inline-block;
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        /* Footer Checklist */
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding-top: 20px;
+        }
+
+        .footer-item strong {
+            color: var(--text-main);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-buttons {
+                flex-direction: column;
+            }
+            footer {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Richard Girling, Ph.D.</h1>
+            <div class="subtitle">GTM Strategy • Data Analytics • Operational Growth</div>
+            <div class="lead-text">
+                Exited founder and strategic growth advisor combining 14+ years of commercial execution with deep analytical rigor. I translate complex data into high-velocity, value-acceleration strategies that land with PE investors and senior management teams.
+            </div>
+            <div class="cta-buttons">
+                <a href="#work" class="btn btn-primary">Explore Case Studies</a>
+                <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+            </div>
+        </header>
+
+        <hr>
+
+        <section>
+            <h2>Commercial Engine & Core Capabilities</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🚀 14+ Years GTM Execution</h3>
+                    <p>Built a healthcare digital marketing agency from zero to a 7-figure exit. Scaled growth and engineered robust, "moat-based" acquisition pipelines for over 500 client organizations.</p>
+                </div>
+                <div class="card">
+                    <h3>📊 Quantitative Data Fluency</h3>
+                    <p>Ph.D. level structural researcher with a core focus on scalability metrics. Certified in Advanced Machine Learning Strategy, applying analytical models directly to corporate growth pipelines.</p>
+                </div>
+                <div class="card">
+                    <h3>💼 PE-Ready Communicator</h3>
+                    <p>Deep experience managing complex stakeholder groups, steering multi-layered projects, and presenting direct commercial recommendations cleanly to senior leaders and investors.</p>
+                </div>
+                <div class="card">
+                    <h3>🧠 End-to-End Ownership</h3>
+                    <p>Proven history operating with high autonomy in fast-paced environments. Deconstructed founder networks internationally and built operational playbooks without baseline hand-holding.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="work">
+            <h2>Value Acceleration Case Studies</h2>
+
+            <div class="case-study">
+                <h3>Case Study 1: Value Acceleration & Scalable GTM Strategy</h3>
+                
+                <div class="cs-meta">
+                    <div class="cs-label">Context & Objective</div>
+                    <div class="cs-text">Red Castle Services (Founder & CEO era) required a highly repeatable, low-friction framework to scale B2B customer acquisition pipelines within high-trust, highly regulated medical markets.</div>
+                </div>
+
+                <div class="cs-meta">
+                    <div class="cs-label">Data Architecture & Synthesis</div>
+                    <div class="cs-text">Mapped granular web traffic, conversions, and customer lifecycle metrics across 500+ client architectures. Structured high-intent database tracking queries to identify untapped commercial volume trends.</div>
+                </div>
+
+                <div class="code-window">
+                    <span class="code-keyword">SELECT</span> market_segment, <span class="code-keyword">COUNT</span>(*), <span class="code-keyword">SUM</span>(arr) <br>
+                    <span class="code-keyword">FROM</span> pipeline_data <br>
+                    <span class="code-keyword">WHERE</span> conversion_intent = <span class="code-string">'High'</span> <br>
+                    <span class="code-keyword">GROUP BY</span> 1 <span class="code-keyword">ORDER BY</span> 3 <span class="code-keyword">DESC</span>;
+                </div>
+
+                <div class="cs-meta">
+                    <div class="cs-label">Commercial Strategy & Execution</div>
+                    <div class="cs-text">Pivoted marketing deployment entirely toward high-moat SEO and data-optimized conversion pipelines, eliminating legacy high-cost/low-yield operational channels.</div>
+                </div>
+
+                <div class="cs-meta">
+                    <div class="cs-label">Measurable Impact</div>
+                    <div class="cs-text">Grew the organization sustainably into a market leader, converting 500+ clinics and ultimately delivering a clean, strategic 7-figure exit in 2025.</div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <h3>Case Study 2: Structural Frameworks & Ecosystem Scalability</h3>
+                
+                <div class="cs-meta">
+                    <div class="cs-label">Context & Objective</div>
+                    <div class="cs-text">Doctoral Research at the University of Amsterdam—architecting structural and social frameworks for analyzing growth, failure boundaries, and international scalability across diverse founder ecosystems.</div>
+                </div>
+
+                <div class="cs-meta">
+                    <div class="cs-label">Methodological Scope</div>
+                    <div class="cs-text">Managed complex, qualitative and quantitative data synthesis through 70+ in-depth founder interviews spanning over 20 global regions to track economic and environmental variables.</div>
+                </div>
+
+                <div class="cs-meta">
+                    <div class="cs-label">Strategic Output</div>
+                    <div class="cs-text">Built actionable frameworks showing how modern platforms cross borders and navigate multi-market regulatory walls to create sustainable defensive moats.</div>
+                </div>
+
+                <div class="cs-meta">
+                    <div class="cs-label">Current Application</div>
+                    <div class="cs-text">These analytical frameworks directly power my current GTM validation and due-diligence work with scaling HealthTech and impact-focused startups.</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Continuous Tech Integration</h2>
+            <div class="evolution-box">
+                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
+                    I build data tools to solve business issues rather than waiting for structural infrastructure blueprints. 
+                </p>
+                
+                <div class="evo-item">
+                    <span class="evo-badge">Completed (Feb 2026)</span>
+                    <h4 style="margin-bottom: 4px; font-weight: 600;">DeepLearning.AI: Sequence Models & ML Project Frameworks</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Mastered strategic lifecycle planning for advanced machine learning deployments, model structures, and sequential predictive data frameworks.</p>
+                </div>
+                
+                <div style="margin-top: 20px;" class="evo-item">
+                    <span class="evo-badge">Active Deployment Focus</span>
+                    <h4 style="margin-bottom: 4px; font-weight: 600;">Data Visualizations & Pipeline Query Automation</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Refining internal automated cohort segmentation models via SQL paired with modern Tableau operational dashboards to maximize transaction speed during due diligence phases.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <div class="footer-item">📍 Location: <strong>London, UK (Hybrid Profile)</strong></div>
+            <div class="footer-item">🇬🇧 Eligibility: <strong>British Citizen (No Sponsorship Required)</strong></div>
+            <div class="footer-item">🏑 Background: <strong>Ex-Durham University Hockey Captain / Peer-Reviewed Author</strong></div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
