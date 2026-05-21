@@ -26,8 +26,10 @@
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
+            padding-bottom: 60px;
         }
 
+        /* Top Header Navigation */
         header {
             background: #ffffff;
             border-bottom: 1px solid var(--border-color);
@@ -61,6 +63,7 @@
             font-weight: 600;
         }
 
+        /* Hero Banner Section */
         .hero-section {
             background: linear-gradient(135deg, #ffffff 0%, #e6f4ff 100%);
             padding: 60px 40px;
@@ -96,6 +99,7 @@
             margin-bottom: 20px;
         }
 
+        /* Main Grid Content */
         .main-container {
             max-width: 1200px;
             margin: 40px auto;
@@ -103,8 +107,10 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 40px;
+            align-items: start;
         }
 
+        /* Main Content Blocks */
         .matrix-card {
             background: #ffffff;
             border-radius: 12px;
@@ -192,10 +198,13 @@
             font-size: 1.05rem;
         }
 
+        /* Sidebar Sidebar Layout */
         .sidebar {
             display: flex;
             flex-direction: column;
             gap: 25px;
+            position: sticky;
+            top: 110px;
         }
 
         .sidebar-widget {
@@ -231,230 +240,4 @@
             font-weight: bold;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--dca-blue);
-            color: #ffffff;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--dca-dark-blue);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-dark);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--bg-light);
-        }
-
-        .connect-widget {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border: 1px solid var(--border-color);
-            z-index: 1000;
-            max-width: 320px;
-        }
-
-        .connect-thumb {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .connect-info p {
-            font-size: 0.85rem;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-
-        .connect-info a {
-            font-size: 0.8rem;
-            color: var(--dca-blue);
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        @media (max-width: 900px) {
-            header { padding: 15px 20px; }
-            .hero-section { flex-direction: column; text-align: center; padding: 40px 20px; }
-            .hero-tagline { border-left: none; padding-left: 0; }
-            .main-container { grid-template-columns: 1fr; padding: 0 20px; }
-            .matrix-row { grid-template-columns: 1fr; gap: 15px; }
-            .connect-widget { display: none; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo-container">
-            <img src="dca-logo.svg" alt="Doctor Care Anywhere Logo">
-        </div>
-        <div class="header-title">
-            <h1>Richard Girling, Ph.D.</h1>
-            <p>Application: Head of Communications</p>
-        </div>
-    </header>
-
-    <section class="hero-section">
-        <img src="richard-girling.jpg" alt="Richard Girling, Ph.D." class="hero-img">
-        <div class="hero-content">
-            <h2>Storytelling, Influence, & Clarity</h2>
-            <p class="hero-tagline">Exited HealthTech founder & former Think Tank Comms Head.</p>
-            <p style="color: var(--text-light); max-width: 700px;">
-                As a UK citizen who scaled and successfully exited a US-based digital healthcare marketing firm, I hold a deep understanding of both public and private healthcare models. Combining this domain expertise with past experience as Head of Communications for an international think tank, I bring the precision, strategic framework, and compliance awareness required to run communications for an ASX-listed digital health leader.
-            </p>
-        </div>
-    </section>
-
-    <main class="main-container">
-        
-        <div class="left-content">
-            <section class="matrix-card">
-                <h3>Your Requirements, My Proven Experience</h3>
-                
-                <div class="matrix-row">
-                    <div class="req-side">
-                        <h4>1. External Communications</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-light);">Elevating brand reputation, modern media engagement, and scaling visibility.</p>
-                        <div class="badge-container">
-                            <span class="badge">External Strategy</span>
-                            <span class="badge">Media Relations</span>
-                        </div>
-                    </div>
-                    <div class="res-side">
-                        <ul>
-                            <li><strong>Regulated Sector Authority:</strong> Deep understanding of target audience sensitivities when deploying digital campaigns across highly monitored, trust-dependent health landscapes.</li>
-                            <li><strong>Cross-Border Narrative Alignment:</strong> Experienced in engineering unified messaging for international networks and cross-border ecosystems.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="matrix-row">
-                    <div class="req-side">
-                        <h4>2. Investor Relations & Financial Comms</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-light);">Interfacing with markets, compliance infrastructure, and financial announcements.</p>
-                        <div class="badge-container">
-                            <span class="badge">Investor Relations</span>
-                            <span class="badge">Financial PR</span>
-                        </div>
-                    </div>
-                    <div class="res-side">
-                        <ul>
-                            <li><strong>London Financial PR Background:</strong> Formative career foundation built directly in corporate financial communications and PR at Redleaf Communications in London.</li>
-                            <li><strong>Analytical Rigor:</strong> PhD in Global Entrepreneurship from the University of Amsterdam. Uniquely equipped to translate complex corporate variables, tech metrics, and financial reporting cycles into crystal-clear market assets.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="matrix-row">
-                    <div class="req-side">
-                        <h4>3. Narrative Ownership & Governance</h4>
-                        <p style="font-size: 0.85rem; color: var(--text-light);">Serving as the final quality gate; designing organization-wide communication frameworks.</p>
-                        <div class="badge-container">
-                            <span class="badge">Narrative Control</span>
-                            <span class="badge">Governance</span>
-                        </div>
-                    </div>
-                    <div class="res-side">
-                        <ul>
-                            <li><strong>Strategic Communications Funnel:</strong> Mastered the art of aligning internal data updates with strict external messaging parameters to eliminate corporate narrative contradictions.</li>
-                            <li><strong>Data & Compliance First:</strong> Deeply familiar with privacy parameters including GDPR compliance structures and modern platform data sensitivities.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="matrix-card">
-                <h3>Strategic Case Studies</h3>
-                
-                <div class="case-study-block">
-                    <div class="case-study-title">Case Study 1: Strategic Infrastructure Overhaul — Migration Policy Group</div>
-                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 8px;">
-                        As Head of Communications for this international think tank, I designed and deployed their entire modern internal and external communications infrastructure from the ground up.
-                    </p>
-                    <ul>
-                        <li><strong>Narrative Funnel:</strong> Implemented a centralized governance framework ensuring all communications across distinct organization tiers aligned with key messaging and visual identity guidelines.</li>
-                        <li><strong>Growth & Visibility:</strong> Scaled digital reach exponentially, driving a <strong>300% increase in website traffic</strong> and a <strong>200% growth in core social media channels</strong>.</li>
-                        <li><strong>Governance:</strong> Fully audited and structured data protocols to ensure complete compliance with strict GDPR regulations.</li>
-                    </ul>
-                </div>
-
-                <div class="case-study-block">
-                    <div class="case-study-title">Case Study 2: Ground-Up HealthTech Scale & Exit — Red Castle Services</div>
-                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 8px;">
-                        Founded, scaled, and managed all strategic messaging for a digital healthcare marketing enterprise servicing the complex, trust-dependent medical space.
-                    </p>
-                    <ul>
-                        <li><strong>Ecosystem Penetration:</strong> Built and optimized the market value proposition to safely acquire and serve over 500+ healthcare practices and medical organizations.</li>
-                        <li><strong>The 7-Figure Exit:</strong> Directed the full commercial lifecycle, maximizing brand equity and driving the firm to a successful 7-figure exit.</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-
-        <aside class="sidebar">
-            <div class="sidebar-widget">
-                <h4>Candidate Highlights</h4>
-                <ul class="summary-list">
-                    <li>UK Citizen (London Native)</li>
-                    <li>PhD in Global Entrepreneurship (UvA)</li>
-                    <li>Exited Healthcare Founder (7-figure scale)</li>
-                    <li>Former Think Tank Head of Comms</li>
-                    <li>Financial PR Agency Experience</li>
-                    <li>DeepLearning.AI Certified</li>
-                </ul>
-            </div>
-
-            <div class="sidebar-widget">
-                <h4>Primary Verification Assets</h4>
-                <a href="https://scholar.google.com/citations?user=93YGWNwAAAAJ&hl=en" target="_blank" class="btn btn-secondary">View Peer-Reviewed Publications</a>
-                <a href="#" target="_blank" class="btn btn-secondary">Download Traditional CV (PDF)</a>
-                <a href="#" class="btn btn-primary">Schedule a Discussion</a>
-            </div>
-
-            <blockquote style="font-style: italic; color: var(--text-light); font-size: 0.9rem; border-left: 3px solid var(--dca-yellow); padding-left: 10px;">
-                "Directing a healthcare marketing lifecycle to a 7-figure exit taught me how to win trust in highly scrutinized markets. Navigating that as a UK citizen in the US landscape gives me a comprehensive view of global care dynamics."
-            </blockquote>
-        </aside>
-    </main>
-
-    <div class="connect-widget">
-        <img src="richard-girling.jpg" alt="Richard Profile" class="connect-thumb">
-        <div class="connect-info">
-            <p>Ready to align your narrative.</p>
-            <a href="#" target="_blank">Connect via LinkedIn →</a>
-        </div>
-    </div>
-
-</body>
-</html>
+        /* Buttons &
