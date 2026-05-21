@@ -95,3 +95,265 @@
             color: var(--text-light);
             font-weight: 400;
             border-left: 4px solid var(--dca-blue);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Main Grid Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Main Content Blocks */
+        .matrix-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .matrix-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .matrix-row {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .matrix-row:last-child {
+            border-bottom: none;
+        }
+
+        .req-side h4 {
+            color: var(--dca-dark-blue);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            background-color: #f0f4f8;
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .res-side ul {
+            list-style-type: none;
+        }
+
+        .res-side li {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .res-side li::before {
+            content: "•";
+            color: var(--dca-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Case Studies Styling */
+        .case-study-block {
+            background: #fafbfc;
+            border-left: 4px solid var(--dca-blue);
+            padding: 20px;
+            margin-top: 15px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .case-study-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+
+        /* Sidebar Sidebar Layout */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: sticky;
+            top: 110px;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .summary-list {
+            list-style: none;
+        }
+
+        .summary-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .summary-list li::before {
+            content: "✓";
+            color: var(--dca-blue);
+            font-weight: bold;
+        }
+
+        /* Buttons & Interactions */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--dca-blue);
+            color: #ffffff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dca-dark-blue);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+        }
+
+        /* Fixed Floating Widget */
+        .connect-widget {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border: 1px solid var(--border-color);
+            z-index: 1000;
+            max-width: 320px;
+        }
+
+        .connect-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .connect-info p {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .connect-info a {
+            font-size: 0.8rem;
+            color: var(--dca-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive Configuration */
+        @media (max-width: 900px) {
+            header { padding: 15px 20px; }
+            .hero-section { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .hero-tagline { border-left: none; padding-left: 0; }
+            .main-container { grid-template-columns: 1fr; padding: 0 20px; }
+            .matrix-row { grid-template-columns: 1fr; gap: 15px; }
+            .connect-widget { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="dca-logo.svg" alt="Doctor Care Anywhere Logo">
+        </div>
+        <div class="header-title">
+            <h1>Richard Girling, Ph.D.</h1>
+            <p>Application: Head of Communications</p>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <img src="richard-girling.jpg" alt="Richard Girling, Ph.D." class="hero-img">
+        <div class="hero-content">
+            <h2>Storytelling, Influence, & Clarity</h2>
+            <p class="hero-tagline">Exited HealthTech founder & former Think Tank Comms Head.</p>
+            <p style="color: var(--text-light); max-width: 700px;">
+                As a UK citizen who scaled and successfully exited a US-based digital healthcare marketing firm, I hold a deep understanding of both public and private healthcare models. Combining this domain expertise with past experience as Head of Communications for an international think tank, I bring the precision, strategic framework, and compliance awareness required to run communications for an ASX-listed digital health leader.
+            </p>
+        </div>
+    </section>
+
+    <main class="main-container">
+        
+        <div class="left-column">
+            
+            <section class="matrix-card">
+                <h3>Your Requirements, My Proven Experience</h3>
+                
+                <div class="matrix-row">
+                    <div class="req-side">
