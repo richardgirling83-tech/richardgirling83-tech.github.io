@@ -3,382 +3,444 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richard Girling, Ph.D. | GTM Strategy & Data Analytics</title>
+    <title>Richard Girling, Ph.D. | Candidate for Head of Communications</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --border: #334155;
-            --code-bg: #020617;
+            --dca-blue: #0091ff;
+            --dca-dark-blue: #0066cc;
+            --dca-yellow: #f5b000;
+            --text-dark: #2d3142;
+            --text-light: #4f5d75;
+            --bg-light: #f8f9fa;
+            --border-color: #e6e8ec;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
-            padding: 0 20px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 0;
-        }
-
-        /* Hero Section */
+        /* Top Header Navigation */
         header {
-            margin-bottom: 60px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -0.05em;
+        .logo-container img {
+            height: 45px;
+            display: block;
+        }
+
+        .header-title {
+            text-align: right;
+        }
+
+        .header-title h1 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .header-title p {
+            font-size: 0.9rem;
+            color: var(--dca-blue);
+            font-weight: 600;
+        }
+
+        /* Hero Banner Section */
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff 0%, #e6f4ff 100%);
+            padding: 60px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .hero-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            font-weight: 400;
+            border-left: 4px solid var(--dca-blue);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Main Grid Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Requirements Matrix (Left Column) */
+        .matrix-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .matrix-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        .matrix-row {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 30px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .matrix-row:last-child {
+            border-bottom: none;
+        }
+
+        .req-side h4 {
+            color: var(--dca-dark-blue);
+            font-size: 1.1rem;
             margin-bottom: 8px;
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
-
-        .lead-text {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 750px;
-            border-left: 3px solid var(--accent);
-            padding-left: 20px;
-            margin-bottom: 32px;
-        }
-
-        .cta-buttons {
+        .badge-container {
             display: flex;
-            gap: 16px;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
+        .badge {
+            background-color: #f0f4f8;
+            color: var(--text-light);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
             font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .res-side p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .res-side ul {
+            list-style-type: none;
+        }
+
+        .res-side li {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .res-side li::before {
+            content: "•";
+            color: var(--dca-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Sidebar Widgets (Right Column) */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-color);
+        }
+
+        .sidebar-widget h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .summary-list {
+            list-style: none;
+        }
+
+        .summary-list li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .summary-list li::before {
+            content: "✓";
+            color: var(--dca-blue);
+            font-weight: bold;
+        }
+
+        /* Buttons & Call to Actions */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
             border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
             text-decoration: none;
             transition: all 0.2s ease;
-            font-size: 0.95rem;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
         .btn-primary {
-            background-color: var(--accent);
-            color: var(--bg-color);
+            background-color: var(--dca-blue);
+            color: #ffffff;
+            border: none;
         }
 
         .btn-primary:hover {
-            opacity: 0.9;
+            background-color: var(--dca-dark-blue);
         }
 
         .btn-secondary {
             background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border);
+            color: var(--text-dark);
+            border: 1px solid var(--border-color);
         }
 
         .btn-secondary:hover {
-            background-color: var(--card-bg);
-            border-color: var(--text-muted);
+            background-color: var(--bg-light);
         }
 
-        /* Divider */
-        hr {
-            border: 0;
-            height: 1px;
-            background: var(--border);
-            margin: 40px 0;
-        }
-
-        section h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 32px;
+        /* Sticky Connect Widget at bottom right */
+        .connect-widget {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 15px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            border: 1px solid var(--border-color);
+            z-index: 1000;
+            max-width: 320px;
         }
 
-        /* Grid Section */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+        .connect-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 28px;
-            border-radius: 8px;
-        }
-
-        .card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--text-main);
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Case Studies */
-        .case-study {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 32px;
-            margin-bottom: 32px;
-        }
-
-        .case-study h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-
-        .cs-meta {
-            margin-bottom: 16px;
-        }
-
-        .cs-label {
-            font-weight: 600;
-            color: var(--text-main);
-            font-size: 0.95rem;
-        }
-
-        .cs-text {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-            padding-left: 12px;
-        }
-
-        /* Code Block Mockup */
-        .code-window {
-            background-color: var(--code-bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 16px;
-            font-family: 'Courier New', Courier, monospace;
+        .connect-info p {
             font-size: 0.85rem;
-            color: #34d399;
-            margin: 12px 0 20px 12px;
-            overflow-x: auto;
-        }
-        .code-keyword { color: #f43f5e; }
-        .code-string { color: #38bdf8; }
-
-        /* Continuous Evolution Layout */
-        .evolution-box {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 28px;
-        }
-
-        .evo-item {
-            margin-bottom: 20px;
-        }
-
-        .evo-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .evo-badge {
-            display: inline-block;
-            background-color: rgba(56, 189, 248, 0.1);
-            color: var(--accent);
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
+            color: var(--text-dark);
             font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 6px;
         }
 
-        /* Footer Checklist */
-        footer {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            justify-content: space-between;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            padding-top: 20px;
+        .connect-info a {
+            font-size: 0.8rem;
+            color: var(--dca-blue);
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .footer-item strong {
-            color: var(--text-main);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .cta-buttons {
-                flex-direction: column;
-            }
-            footer {
-                flex-direction: column;
-                gap: 16px;
-            }
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            header { padding: 15px 20px; }
+            .hero-section { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .hero-tagline { border-left: none; padding-left: 0; }
+            .main-container { grid-template-columns: 1fr; padding: 0 20px; }
+            .matrix-row { grid-template-columns: 1fr; gap: 15px; }
+            .connect-widget { display: none; } /* Hide on small screens for cleaner layout */
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <header>
+    <header>
+        <div class="logo-container">
+            <img src="dca-logo.svg" alt="Doctor Care Anywhere Logo">
+        </div>
+        <div class="header-title">
             <h1>Richard Girling, Ph.D.</h1>
-            <div class="subtitle">GTM Strategy • Data Analytics • Operational Growth</div>
-            <div class="lead-text">
-                Exited founder and strategic growth advisor combining 14+ years of commercial execution with deep analytical rigor. I translate complex data into high-velocity, value-acceleration strategies that land with PE investors and senior management teams.
-            </div>
-            <div class="cta-buttons">
-                <a href="#work" class="btn btn-primary">Explore Case Studies</a>
-                <a href="https://www.linkedin.com/in/richard-girling-ph-d-a8a5999/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
-            </div>
-        </header>
+            <p>Application: Head of Communications</p>
+        </div>
+    </header>
 
-        <hr>
+    <section class="hero-section">
+        <img src="richard-girling.jpg" alt="Richard Girling, Ph.D." class="hero-img">
+        <div class="hero-content">
+            <h2>Storytelling, Influence, & Clarity</h2>
+            <p class="hero-tagline">Aligning operational HealthTech experience with public market narrative precision.</p>
+            <p style="color: var(--text-light); max-width: 700px;">
+                As a former HealthTech founder with a successful 7-figure exit, a corporate communications director, and an ecosystem researcher, I offer Doctor Care Anywhere a unique blend of strategic storytelling, agility, and the regulatory discipline required to run communications and investor relations for an ASX-listed enterprise.
+            </p>
+        </div>
+    </section>
 
-        <section>
-            <h2>Commercial Engine & Core Capabilities</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>🚀 14+ Years GTM Execution</h3>
-                    <p>Built a healthcare digital marketing agency from zero to a 7-figure exit. Scaled growth and engineered robust, "moat-based" acquisition pipelines for over 500 client organizations.</p>
+    <main class="main-container">
+        
+        <section class="matrix-card">
+            <h3>Your Requirements, My Proven Experience</h3>
+            
+            <div class="matrix-row">
+                <div class="req-side">
+                    <h4>1. External Communications</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">Elevating brand equity, narrative management, media relations, and agency oversight.</p>
+                    <div class="badge-container">
+                        <span class="badge">External Comms</span>
+                        <span class="badge">Brand Strategy</span>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>📊 Quantitative Data Fluency</h3>
-                    <p>Ph.D. level structural researcher with a core focus on scalability metrics. Certified in Advanced Machine Learning Strategy, applying analytical models directly to corporate growth pipelines.</p>
-                </div>
-                <div class="card">
-                    <h3>💼 PE-Ready Communicator</h3>
-                    <p>Deep experience managing complex stakeholder groups, steering multi-layered projects, and presenting direct commercial recommendations cleanly to senior leaders and investors.</p>
-                </div>
-                <div class="card">
-                    <h3>🧠 End-to-End Ownership</h3>
-                    <p>Proven history operating with high autonomy in fast-paced environments. Deconstructed founder networks internationally and built operational playbooks without baseline hand-holding.</p>
+                <div class="res-side">
+                    <ul>
+                        <li><strong>Proven HealthTech Domain Knowledge:</strong> Built and optimized the market narrative for over 500+ medical practices and healthcare organizations across the US at Red Castle Services.</li>
+                        <li><strong>Global Network Management:</strong> Managed complex communications across international jurisdictions and regulatory structures.</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="matrix-row">
+                <div class="req-side">
+                    <h4>2. Investor Relations & Markets</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">Interface with investment community, financial compliance, announcements, and presentations.</p>
+                    <div class="badge-container">
+                        <span class="badge">Investor Relations</span>
+                        <span class="badge">Financial Comms</span>
+                    </div>
+                </div>
+                <div class="res-side">
+                    <ul>
+                        <li><strong>Academic & Analytical Rigor:</strong> PhD framework from the University of Amsterdam specializing in scalability and data-driven corporate capital. Highly trained to construct robust, clear market disclosures.</li>
+                        <li><strong>The Founder's Lens:</strong> Personally drove a healthcare technology firm through its life cycle to a 7-figure exit. I look at financial communications with an owner’s perspective on ROI and strategy.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="req-side">
+                    <h4>3. Narrative Ownership & Governance</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">Acting as the final quality gate; framework creation; translating complex science/tech into clean narratives.</p>
+                    <div class="badge-container">
+                        <span class="badge">Narrative Control</span>
+                        <span class="badge">Quality Gate</span>
+                    </div>
+                </div>
+                <div class="res-side">
+                    <ul>
+                        <li><strong>Former Head of Communications:</strong> Managed international strategy and built the modern digital architecture used to safely influence policy stakeholders at Migration Policy Group.</li>
+                        <li><strong>Technical Translation:</strong> Completed specialized training in Machine Learning and AI Strategy (DeepLearning.AI), making me uniquely qualified to clearly frame DCA's proprietary platform capabilities to non-technical stakeholders.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="matrix-row">
+                <div class="req-side">
+                    <h4>4. Internal Comms & Leadership</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-light);">Executive advisory, corporate alignment, inspiring teams, crisis preparedness.</p>
+                    <div class="badge-container">
+                        <span class="badge">Leadership</span>
+                        <span class="badge">Internal Alignment</span>
+                    </div>
+                </div>
+                <div class="res-side">
+                    <ul>
+                        <li><strong>Executive Stewardship:</strong> Experienced operating at the helm of organizations as an Executive Director and CEO, working seamlessly alongside board members and executive management.</li>
+                        <li><strong>Agile and Adaptive culture:</strong> Native to fast-paced, non-corporate startup environments as well as large institutional research frameworks.</li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
 
-        <hr>
-
-        <section id="work">
-            <h2>Value Acceleration Case Studies</h2>
-
-            <div class="case-study">
-                <h3>Case Study 1: Value Acceleration & Scalable GTM Strategy</h3>
-                
-                <div class="cs-meta">
-                    <div class="cs-label">Context & Objective</div>
-                    <div class="cs-text">Red Castle Services (Founder & CEO era) required a highly repeatable, low-friction framework to scale B2B customer acquisition pipelines within high-trust, highly regulated medical markets.</div>
-                </div>
-
-                <div class="cs-meta">
-                    <div class="cs-label">Data Architecture & Synthesis</div>
-                    <div class="cs-text">Mapped granular web traffic, conversions, and customer lifecycle metrics across 500+ client architectures. Structured high-intent database tracking queries to identify untapped commercial volume trends.</div>
-                </div>
-
-                <div class="code-window">
-                    <span class="code-keyword">SELECT</span> market_segment, <span class="code-keyword">COUNT</span>(*), <span class="code-keyword">SUM</span>(arr) <br>
-                    <span class="code-keyword">FROM</span> pipeline_data <br>
-                    <span class="code-keyword">WHERE</span> conversion_intent = <span class="code-string">'High'</span> <br>
-                    <span class="code-keyword">GROUP BY</span> 1 <span class="code-keyword">ORDER BY</span> 3 <span class="code-keyword">DESC</span>;
-                </div>
-
-                <div class="cs-meta">
-                    <div class="cs-label">Commercial Strategy & Execution</div>
-                    <div class="cs-text">Pivoted marketing deployment entirely toward high-moat SEO and data-optimized conversion pipelines, eliminating legacy high-cost/low-yield operational channels.</div>
-                </div>
-
-                <div class="cs-meta">
-                    <div class="cs-label">Measurable Impact</div>
-                    <div class="cs-text">Grew the organization sustainably into a market leader, converting 500+ clinics and ultimately delivering a clean, strategic 7-figure exit in 2025.</div>
-                </div>
+        <aside class="sidebar">
+            
+            <div class="sidebar-widget">
+                <h4>At a Glance</h4>
+                <ul class="summary-list">
+                    <li>PhD, Entrepreneurship (UvA)</li>
+                    <li>Exited Founder (7-figure scale)</li>
+                    <li>Former Head of Communications</li>
+                    <li>HealthTech domain expertise</li>
+                    <li>DeepLearning.AI Certified</li>
+                </ul>
             </div>
 
-            <div class="case-study">
-                <h3>Case Study 2: Structural Frameworks & Ecosystem Scalability</h3>
-                
-                <div class="cs-meta">
-                    <div class="cs-label">Context & Objective</div>
-                    <div class="cs-text">Doctoral Research at the University of Amsterdam—architecting structural and social frameworks for analyzing growth, failure boundaries, and international scalability across diverse founder ecosystems.</div>
-                </div>
-
-                <div class="cs-meta">
-                    <div class="cs-label">Methodological Scope</div>
-                    <div class="cs-text">Managed complex, qualitative and quantitative data synthesis through 70+ in-depth founder interviews spanning over 20 global regions to track economic and environmental variables.</div>
-                </div>
-
-                <div class="cs-meta">
-                    <div class="cs-label">Strategic Output</div>
-                    <div class="cs-text">Built actionable frameworks showing how modern platforms cross borders and navigate multi-market regulatory walls to create sustainable defensive moats.</div>
-                </div>
-
-                <div class="cs-meta">
-                    <div class="cs-label">Current Application</div>
-                    <div class="cs-text">These analytical frameworks directly power my current GTM validation and due-diligence work with scaling HealthTech and impact-focused startups.</div>
-                </div>
+            <div class="sidebar-widget">
+                <h4>Primary Verification Assets</h4>
+                <a href="https://scholar.google.com/citations?user=93YGWNwAAAAJ&hl=en" target="_blank" class="btn btn-secondary">View Peer-Reviewed Publications</a>
+                <a href="#" target="_blank" class="btn btn-secondary">Download Traditional CV (PDF)</a>
+                <a href="#" class="btn btn-primary">Schedule a Discussion</a>
             </div>
-        </section>
 
-        <hr>
+            <blockquote style="font-style: italic; color: var(--text-light); font-size: 0.9rem; border-left: 3px solid var(--dca-yellow); padding-left: 10px;">
+                "I built a healthcare digital marketing agency from the ground up, grew it to serve 500+ practices, and sold it. That journey gave me the practical understanding of what it takes to drive commercial growth in highly regulated markets."
+            </blockquote>
 
-        <section>
-            <h2>Continuous Tech Integration</h2>
-            <div class="evolution-box">
-                <p style="color: var(--text-muted); margin-bottom: 24px; font-size: 0.95rem;">
-                    I build data tools to solve business issues rather than waiting for structural infrastructure blueprints. 
-                </p>
-                
-                <div class="evo-item">
-                    <span class="evo-badge">Completed (Feb 2026)</span>
-                    <h4 style="margin-bottom: 4px; font-weight: 600;">DeepLearning.AI: Sequence Models & ML Project Frameworks</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Mastered strategic lifecycle planning for advanced machine learning deployments, model structures, and sequential predictive data frameworks.</p>
-                </div>
-                
-                <div style="margin-top: 20px;" class="evo-item">
-                    <span class="evo-badge">Active Deployment Focus</span>
-                    <h4 style="margin-bottom: 4px; font-weight: 600;">Data Visualizations & Pipeline Query Automation</h4>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Refining internal automated cohort segmentation models via SQL paired with modern Tableau operational dashboards to maximize transaction speed during due diligence phases.</p>
-                </div>
-            </div>
-        </section>
+        </aside>
+    </main>
 
-        <hr>
-
-        <footer>
-            <div class="footer-item">📍 Location: <strong>London, UK (Hybrid Profile)</strong></div>
-            <div class="footer-item">🇬🇧 Eligibility: <strong>British Citizen (No Sponsorship Required)</strong></div>
-            <div class="footer-item">🏑 Background: <strong>Ex-Durham University Hockey Captain / Peer-Reviewed Author</strong></div>
-        </footer>
-
+    <div class="connect-widget">
+        <img src="richard-girling.jpg" alt="Richard Profile" class="connect-thumb">
+        <div class="connect-info">
+            <p>Let's align your narrative.</p>
+            <a href="#" target="_blank">Connect via LinkedIn →</a>
+        </div>
     </div>
 
 </body>
